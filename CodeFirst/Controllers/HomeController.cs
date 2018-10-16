@@ -10,13 +10,9 @@ namespace CodeFirst.Controllers
     {
         public ActionResult Index()
         {
-            Models.Product p = new Models.Product();
-            p.Product_Code = "SOFT549";
-            p.Product_Name = "Book";
             using (var db = new Models.ProductDB())
             {
-                db.products.Add(p);
-                db.SaveChanges();
+
                 ViewBag.Message = "The number of products so far is " + db.products.Count().ToString();
             }
             return View();
