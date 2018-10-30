@@ -1,0 +1,50 @@
+﻿@model WebApplication2.Pizza
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pizza</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.pizzaName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pizzaName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pizzaToppings)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pizzaToppings)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.customerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customerID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.pizzaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
