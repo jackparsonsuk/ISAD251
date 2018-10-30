@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <form method="post">
+        <input type="text" name="Username" />
+        <input type="password" name="Password" />
+        <input type="submit" value="Enter" />
+    </form>
+
+    @{
+        string uname = "Admin";
+        string pword = "letmein";
+        if (Request.Form["Username"] == uname && Request.Form["Password"] == pword)
+        {
+            Response.Write("LOGIN SUCCESSFULL");
+
+        }
+        else if (Request.Form["Username"] == "" ||` Request.Form["Username"] == "")
+        {
+            Response.Write("LOGIN");
+        }
+        else if (Request.Form["Username"] != uname || Request.Form["Password"] != pword)
+        {
+            Response.Write("LOGIN UNSUCCESSFULL");
+        }
+        else
+        {
+            Response.Write("LOGIN");
+        }
+
+    }
+
+</body>
+</html>
